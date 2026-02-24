@@ -1,0 +1,50 @@
+/* the nav bar — name left, links middle, button right */
+nav {
+    display: flex; /* put everything in a row */
+    justify-content: space-between; /* push them to opposite ends */
+    align-items: center; /* line them up vertically in the middle */
+    padding: 20px 40px; /* breathing room inside the bar */
+    position: fixed; /* stay at the top when scrolling */
+    top: 0;
+    width: 100%;
+    background-color: white;
+    box-sizing: border-box; /* prevent padding from overflowing the screen */
+}
+
+/* the name on the left */
+.logo {
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none; /* no underline */
+    color: black;
+}
+
+/* the links in the middle */
+nav ul {
+    list-style: none; /* remove bullet points */
+    display: flex; /* put links side by side */
+    gap: 32px; /* space between each link */
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+}
+
+/* the contact button on the right */
+.contact-btn {
+    text-decoration: none;
+    color: black;
+    border: 1.5px solid black; /* the box outline */
+    padding: 10px 20px;
+    font-size: 15px;
+}
+
+/* button fills in when you hover over it */
+.contact-btn:hover {
+    background-color: black;
+    color: white;
+}
