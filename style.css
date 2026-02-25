@@ -1,3 +1,9 @@
+/* remove default browser spacing */
+body {
+    margin: 0;
+    padding: 0;
+}
+
 /* the nav bar — name left, links middle, button right */
 nav {
     display: flex; /* put everything in a row */
@@ -6,32 +12,43 @@ nav {
     padding: 20px 40px; /* breathing room inside the bar */
     position: fixed; /* stay at the top when scrolling */
     top: 0;
+    left: 0;
     width: 100%;
     background-color: white;
     box-sizing: border-box; /* prevent padding from overflowing the screen */
+    border-bottom: 1px solid black;
 }
 
 /* the name on the left */
 .logo {
     font-weight: bold;
-    font-size: 18px;
+    font-size: 30px;
     text-decoration: none; /* no underline */
     color: black;
+    flex: 1; /* take up equal space so links stay centered */
 }
 
 /* the links in the middle */
 nav ul {
     list-style: none; /* remove bullet points */
     display: flex; /* put links side by side */
-    gap: 32px; /* space between each link */
+    gap: 150px; /* space between each link */
     margin: 0;
     padding: 0;
+    font-size: 20px
 }
 
 nav ul li a {
     text-decoration: none;
     color: black;
-    font-size: 15px;
+    font-size: 20px;
+}
+
+/* wrapper pushes the button to the right */
+.contact-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
 }
 
 /* the contact button on the right */
@@ -40,11 +57,67 @@ nav ul li a {
     color: black;
     border: 1.5px solid black; /* the box outline */
     padding: 10px 20px;
-    font-size: 15px;
+    font-size: 20px;
 }
 
 /* button fills in when you hover over it */
 .contact-btn:hover {
     background-color: black;
     color: white;
+}
+
+/* home / landing section */
+#home {
+    display: flex; /* photo and text side by side */
+    align-items: center; /* vertically center them */
+    justify-content: center; /* center everything horizontally */
+    gap: 150px; /* space between photo and text */
+    height: 100vh; /* fill exactly one screen */
+    padding-top: 80px; /* offset for the fixed navbar */
+    box-sizing: border-box;
+}
+
+#home img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover; /* crop photo to fit without stretching */
+    border-radius: 50%; /* makes it a circle */
+    flex-shrink: 0; /* prevent photo from shrinking */
+}
+
+#home h1 {
+    font-size: 80px;
+    margin: 0;
+}
+
+#home p {
+    font-size: 40px;
+    margin: 0;
+}
+
+#home div {
+    text-align: center; /* centers "Anh" under "Hello! I am" */
+}
+
+/* about me section */
+#aboutme {
+    height: 100vh; /* fill exactly one screen */
+    display: flex;
+    flex-direction: column; /* stack heading and text vertically */
+    justify-content: center; /* center vertically */
+    align-items: center; /* center horizontally */
+    padding: 80px 100px;
+    box-sizing: border-box;
+}
+
+#aboutme h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+#aboutme p {
+    font-size: 20px;
+    text-align: center;
+    max-width: 700px; /* keep text from stretching too wide */
+    line-height: 1.8;
 }
