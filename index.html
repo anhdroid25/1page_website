@@ -32,18 +32,111 @@
 <!-- about me section -->
 <section id="aboutme">
   <div class="aboutme-row">
-    <div class="aboutme-grid">
+    <!-- 2 photos stacked on the left -->
+    <div class="aboutme-grid-left">
       <img src="scenary_photo.jpg" alt="Scenery" />
       <img src="steak_photo.jpg" alt="Steak" />
-      <img src="dj_photo.jpg" alt="DJing" />
-      <img src="bobo.jpg" alt="Bobo" />
     </div>
+    <!-- bio in the middle -->
     <div class="aboutme-block">
       <h1>About Me</h1>
       <p>Glad to see you here! There are 3 different ways to pronounce my name but only 1 is correct (you can always ask me but I actually do not mind how you say it). I am an aspiring data analyst/engineer and machine learning engineer. I am attending CSULB and will be graduating in Spring 2026. I love learning new things so please, if you can teach me whatever that you are passionate about, be my guest!</p>
       <p><strong>Hobbies:</strong> Volleyball, DJing, Watching Videos About Cars and Rockets, and Traveling</p>
       <p><strong>Favorite Foods:</strong> Steak (medium rare), Banh Mi, Pho, Beignets</p>
       <p><strong>I Love:</strong> My Family and Dog (Bobo), My DJ Deck, and My Camry!</p>
+    </div>
+    <!-- 2 photos stacked on the right -->
+    <div class="aboutme-grid-right">
+      <img src="dj_photo.jpg" alt="DJing" />
+      <img src="bobo.jpg" alt="Bobo" />
+    </div>
+  </div>
+</section>
+
+
+<!-- projects section -->
+<section id="projects">
+  <h1>Projects</h1>
+
+  <!-- Data Analysis -->
+  <h2>Data Analysis</h2>
+  <div class="project-scroll">
+    <div class="project-card" onclick="toggleCard(this)">
+      <img src="project_image.jpg" alt="Project 1" />
+      <h3>US Tech Salary Analysis and Prediction</h3>
+      <p class="preview">Short one line description</p>
+      <div class="project-details">
+        <p><strong>Tools:</strong> Python, SQL</p>
+        <a href="https://github.com/yourprofile/repo" target="_blank">View on GitHub →</a>
+      </div>
+    </div>
+    <div class="project-card" onclick="toggleCard(this)">
+      <img src="project_image.jpg" alt="Project 2" />
+      <h3>Global Space Launch Industry Analysis</h3>
+      <p class="preview">Short one line description</p>
+      <div class="project-details">
+        <p><strong>Tools:</strong> Python, Tableau</p>
+        <a href="https://github.com/yourprofile/repo" target="_blank">View on GitHub →</a>
+      </div>
+    </div>
+    <div class="project-card" onclick="toggleCard(this)">
+      <img src="project_image.jpg" alt="Project 3" />
+      <h3>Project Name</h3>
+      <p class="preview">Short one line description</p>
+      <div class="project-details">
+        <p><strong>Tools:</strong> SQL, Excel</p>
+        <a href="https://github.com/yourprofile/repo" target="_blank">View on GitHub →</a>
+      </div>
+    </div>
+    <div class="project-card" onclick="toggleCard(this)">
+      <img src="project_image.jpg" alt="Project 4" />
+      <h3>Project Name</h3>
+      <p class="preview">Short one line description</p>
+      <div class="project-details">
+        <p><strong>Tools:</strong> Python, SQL</p>
+        <a href="https://github.com/yourprofile/repo" target="_blank">View on GitHub →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Machine Learning / Software -->
+  <h2>Machine Learning & Software</h2>
+  <div class="project-scroll">
+    <div class="project-card" onclick="toggleCard(this)">
+      <img src="project_image.jpg" alt="Project 1" />
+      <h3>E-Bike Detection</h3>
+      <p class="preview">Short one line description</p>
+      <div class="project-details">
+        <p><strong>Tools:</strong> Python, TensorFlow</p>
+        <a href="https://github.com/yourprofile/repo" target="_blank">View on GitHub →</a>
+      </div>
+    </div>
+    <div class="project-card" onclick="toggleCard(this)">
+      <img src="project_image.jpg" alt="Project 2" />
+      <h3>HappyMapper</h3>
+      <p class="preview">Short one line description</p>
+      <div class="project-details">
+        <p><strong>Tools:</strong> Python, scikit-learn</p>
+        <a href="https://github.com/yourprofile/repo" target="_blank">View on GitHub →</a>
+      </div>
+    </div>
+    <div class="project-card" onclick="toggleCard(this)">
+      <img src="project_image.jpg" alt="Project 3" />
+      <h3>Pique</h3>
+      <p class="preview">Short one line description</p>
+      <div class="project-details">
+        <p><strong>Tools:</strong> C#, .NET</p>
+        <a href="https://github.com/yourprofile/repo" target="_blank">View on GitHub →</a>
+      </div>
+    </div>
+    <div class="project-card" onclick="toggleCard(this)">
+      <img src="project_image.jpg" alt="Project 4" />
+      <h3>Project Name</h3>
+      <p class="preview">Short one line description</p>
+      <div class="project-details">
+        <p><strong>Tools:</strong> Python, Flask</p>
+        <a href="https://github.com/yourprofile/repo" target="_blank">View on GitHub →</a>
+      </div>
     </div>
   </div>
 </section>
