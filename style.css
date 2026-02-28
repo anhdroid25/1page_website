@@ -1,226 +1,414 @@
-/* remove default browser spacing */
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-    margin: 0;
-    padding: 0;
+  font-family: Arial, sans-serif;
 }
 
-/* the nav bar — name left, links middle, button right */
+/* ================= NAVBAR ================= */
+
 nav {
-    display: flex; /* put everything in a row */
-    justify-content: space-between; /* push them to opposite ends */
-    align-items: center; /* line them up vertically in the middle */
-    padding: 20px 40px; /* breathing room inside the bar */
-    position: fixed; /* stay at the top when scrolling */
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: white;
-    box-sizing: border-box; /* prevent padding from overflowing the screen */
-    border-bottom: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  border-bottom: 1px solid black;
+  z-index: 1000;
 }
 
-/* the name on the left */
 .logo {
-    font-weight: bold;
-    font-size: 30px;
-    text-decoration: none; /* no underline */
-    color: black;
-    flex: 1; /* take up equal space so links stay centered */
+  font-weight: bold;
+  font-size: 30px;
+  text-decoration: none;
+  color: black;
+  flex: 1;
 }
 
-/* the links in the middle */
 nav ul {
-    list-style: none; /* remove bullet points */
-    display: flex; /* put links side by side */
-    gap: 150px; /* space between each link */
-    margin: 0;
-    padding: 0;
-    font-size: 20px
+  list-style: none;
+  display: flex;
+  gap: 100px;
+  font-size: 20px;
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: black;
-    font-size: 20px;
+  text-decoration: none;
+  color: black;
 }
 
-/* wrapper pushes the button to the right */
 .contact-wrapper {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
 }
 
-/* the contact button on the right */
 .contact-btn {
-    text-decoration: none;
-    color: black;
-    border: 1.5px solid black; /* the box outline */
-    padding: 10px 20px;
-    font-size: 20px;
+  text-decoration: none;
+  color: black;
+  border: 1.5px solid black;
+  padding: 10px 20px;
+  font-size: 18px;
+  transition: 0.2s ease;
 }
 
-/* button fills in when you hover over it */
 .contact-btn:hover {
-    background-color: black;
-    color: white;
+  background-color: black;
+  color: white;
 }
 
-/* home / landing section */
+/* ================= HOME ================= */
+
 #home {
-    display: flex; /* photo and text side by side */
-    align-items: center; /* vertically center them */
-    justify-content: center; /* center everything horizontally */
-    gap: 150px; /* space between photo and text */
-    height: 100vh; /* fill exactly one screen */
-    padding-top: 80px; /* offset for the fixed navbar */
-    box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 120px;
+  height: 100vh;
+  padding-top: 100px;
 }
 
 #home img {
-    width: 350px;
-    height: 350px;
-    object-fit: cover; /* crop photo to fit without stretching */
-    border-radius: 50%; /* makes it a circle */
-    flex-shrink: 0; /* prevent photo from shrinking */
+  width: 420px;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 #home h1 {
-    font-size: 80px;
-    margin: 0;
+  font-size: 80px;
 }
 
 #home p {
-    font-size: 40px;
-    margin: 0;
+  font-size: 36px;
 }
 
 #home div {
-    text-align: center; /* centers "Anh" under "Hello! I am" */
+  text-align: center;
 }
 
-/* about me section */
+/* ================= ABOUT ME ================= */
+
 #aboutme {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 120px 80px 80px;
-    box-sizing: border-box;
+  min-height: 100vh;
+  padding: 120px 80px 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* photos left, bio right — side by side, centered on page */
 .aboutme-row {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 140px;
-    width: fit-content; /* shrink to content so it centers properly */
-    margin: 0 auto; /* center the whole block */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
-/* 2 photos stacked on the left */
 .aboutme-grid-left,
 .aboutme-grid-right {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-shrink: 0;
 }
 
 .aboutme-grid-left img,
 .aboutme-grid-right img {
-    width: 400px;
-    height: 350px;
-    object-fit: cover;
-    display: block;
+  width: 350px;
+  height: 320px;
+  object-fit: cover;
 }
 
-/* bio text on the right */
 .aboutme-block {
-    max-width: 700px;
-    text-align: left;
+  max-width: 650px;
 }
 
 #aboutme h1 {
-    font-size: 52px;
-    margin-bottom: 20px;
+  font-size: 52px;
+  margin-bottom: 20px;
 }
 
 #aboutme p {
-    font-size: 24px;
-    line-height: 1.9;
-    margin-bottom: 16px;
+  font-size: 22px;
+  line-height: 1.7;
+  margin-bottom: 16px;
 }
 
+/* ================= EXPERIENCES ================= */
 
+#experiences {
+  min-height: 100vh;
+  padding: 120px 80px 80px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
 
+.experiences-container {
+  max-width: 1200px;
+  width: 100%;
+}
 
-/* projects section */
+#experiences h1 {
+  font-size: 52px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.experience-card {
+  border-left: 3px solid black;
+  padding: 20px 30px;
+  margin-bottom: 40px;
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.experience-card h2 {
+  font-size: 22px;
+}
+
+.experience-card h3 {
+  font-size: 18px;
+  font-weight: normal;
+  color: #555;
+  margin-top: 4px;
+}
+
+.experience-date {
+  font-size: 16px;
+  color: #555;
+  white-space: nowrap;
+}
+
+.experience-card ul {
+  padding-left: 20px;
+}
+
+.experience-card ul li {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 6px;
+}
+
+/* ================= PROJECTS ================= */
+
 #projects {
-  padding: 40px 200px 80px;
-  box-sizing: border-box;
+  min-height: 100vh;
+  padding: 120px 80px 80px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.projects-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 #projects h1 {
   font-size: 52px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 #projects h2 {
-  font-size: 30px;
-  margin: 40px 0 16px;
+  font-size: 28px;
+  margin: 40px 0 20px;
 }
 
-/* row of cards — stays on one line */
 .project-scroll {
   display: flex;
-  flex-direction: row;
-  gap: 50px;
-  padding-bottom: 16px;
+  gap: 40px;
+  overflow-x: auto;
 }
 
-/* each project card */
 .project-card {
-  flex: 1; /* cards share the row equally */
+  min-width: 260px;
   border: 1px solid #ddd;
   padding: 16px;
+  background: white;
   cursor: pointer;
-  box-sizing: border-box;
+  transition: 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
 }
 
 .project-card img {
   width: 100%;
-  height: 180px;
+  height: 170px;
   object-fit: cover;
-  display: block;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .project-card h3 {
-  font-size: 20px;
-  margin: 0 0 8px;
+  font-size: 18px;
+  margin-bottom: 8px;
 }
 
 .project-card .preview {
-  font-size: 15px;
-  margin: 0 0 8px;
+  font-size: 14px;
   color: #555;
+  margin-bottom: 8px;
 }
 
 .project-details {
   display: none;
-  margin-top: 12px;
-  font-size: 15px;
-}
-
-.project-details a {
-  display: inline-block;
-  margin-top: 8px;
-  color: black;
-  font-weight: bold;
+  font-size: 14px;
 }
 
 .project-card.open .project-details {
   display: block;
+}
+
+/* ================= SKILLS ================= */
+
+#skills {
+  min-height: 100vh;
+  padding: 120px 80px 80px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.skills-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#skills h1 {
+  font-size: 52px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#skills h2 {
+  font-size: 26px;
+  margin: 30px 0 16px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.skills-grid.row-10 {
+  grid-template-columns: repeat(10, 1fr);
+}
+
+.skills-grid i {
+  font-size: 90px;
+  display: grid;
+  place-items: center;
+  transition: 0.2s ease;
+}
+
+.skills-grid i:hover {
+  transform: scale(1.1);
+}
+
+/* Offset for fixed navbar when scrolling */
+section {
+  scroll-margin-top: 100px;
+}
+
+
+/* ================= CONTACTS ================= */
+#contacts {
+  min-height: 100vh;
+  padding: 120px 80px 80px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.contacts-container{
+  display:flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.contact-left{
+  display:flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+
+}
+
+.contact-left-title h2{
+  font-weight: 600;
+  font-size: 40px;
+  margin-bottom: 5px;
+}
+
+.contact-left-title hr{
+  border: none;
+  width: 120px;
+  height: 5px;
+}
+
+.contact-inputs{
+  width: 400px;
+  height:50px;
+  border: 1px solid black;
+  outline:none;
+  padding-left: 25px;
+  font-weight: 500;
+  border-radius: 50px;
+  font-size: 18px;
+}
+
+.contact-left textarea{
+  height: 140px;
+  padding-top: 15px;
+  border-radius: 20px;
+}
+
+.contact-inputs:focus{
+  border: 2px solid #ff994f;
+}
+
+.contacts-inputs::placeholder{
+  color: #a9a9a9;
+}
+
+.contact-left button{
+  display:flex;
+  align-items: center;
+  padding: 15px 30px;
+  font-size: 16px;
+  color: #fff;
+  gap: 10px;
+  border:none;
+  border-radius:50px;
+  background: linear-gradient(270deg, #ff994f, #fa6d86);
+  cursor: pointer;
 }

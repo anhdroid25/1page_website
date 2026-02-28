@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- restriction to mobile scaling -->
     <title>Anh Nguyen</title> <!-- shows up on the browser tab -->
     <link rel="stylesheet" href="style.css" /> <!-- bring in the styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"> <!-- devicon coding skills logo -->
+
   </head>
   <body> <!-- everything the user sees goes in here -->
 
@@ -13,16 +15,18 @@
       <a href="#home" class="logo">Anh Nguyen</a> <!-- clicking name takes you back to top -->
       <ul> <!-- the three nav links in the middle -->
         <li><a href="#aboutme">About Me</a></li>
+        <li><a href="#experiences">Experiences</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#resume">Resume</a></li>
+        <li><a href="#skills">Skills</a></li>
       </ul>
       <div class="contact-wrapper">
         <a href="#contacts" class="contact-btn">Contact Me</a> <!-- the outlined button on the right -->
       </div>
     </nav>
-<!-- about me section -->
+
+<!-- home section -->
 <section id="home">
-  <img src="unnamed.png" alt="Photo of Anh Nguyen" />
+  <img src="images/main.jpg" alt="Photo of Anh Nguyen" />
   <div>
     <p>Hello! I am</p>
     <h1>Anh</h1>
@@ -34,8 +38,8 @@
   <div class="aboutme-row">
     <!-- 2 photos stacked on the left -->
     <div class="aboutme-grid-left">
-      <img src="scenary_photo.jpg" alt="Scenery" />
-      <img src="steak_photo.jpg" alt="Steak" />
+      <img src="images/scenary_photo.jpg" alt="Scenery" />
+      <img src="images/steak_photo.jpg" alt="Steak" />
     </div>
     <!-- bio in the middle -->
     <div class="aboutme-block">
@@ -47,101 +51,254 @@
     </div>
     <!-- 2 photos stacked on the right -->
     <div class="aboutme-grid-right">
-      <img src="dj_photo.jpg" alt="DJing" />
-      <img src="bobo.jpg" alt="Bobo" />
+      <img src="images/dj_photo.jpg" alt="DJing" />
+      <img src="images/bobo.jpg" alt="Bobo" />
     </div>
   </div>
 </section>
 
+
+<!-- experiences section -->
+<section id="experiences">
+  <div class="experiences-container">
+    <h1>Experiences</h1>
+
+    <!-- one experience entry -->
+    <div class="experience-card">
+      <div class="experience-header">
+        <div>
+          <h2>Machine Learning Engineer Intern</h2>
+          <h3>PVNet</h3>
+        </div>
+        <span class="experience-date">May 2025 – October 2025</span>
+      </div>
+      <ul>
+        <li>Engineered YOLOv8 + MediaPipe Pose fusion pipeline for real-time bike rider classification in live video streams.</li>
+        <li>Architected IoU-based detection and pose estimation logic to maintain robust performance under occlusions and
+challenging angles.</li>
+        <li>Deployed production-grade Python/OpenCV/PyTorch computer vision system for continuous public safety monitoring.</li>
+      </ul>
+    </div>
+
+    <div class="experience-card">
+      <div class="experience-header">
+        <div>
+          <h2>Research Assistant</h2>
+          <h3>California State University, Long Beach</h3>
+        </div>
+        <span class="experience-date">Jan 2025 – May 2025</span>
+      </div>
+      <ul>
+        <li>Orchestrated data collection, organization, and statistical analysis for faculty-led research initiatives.</li>
+        <li>Conducted literature reviews and synthesized findings to strengthen presentations and grant proposals</li>
+    </div>
+
+    <div class="experience-card">
+      <div class="experience-header">
+        <div>
+          <h2>IT Techinician</h2>
+          <h3>City Dental</h3>
+        </div>
+        <span class="experience-date">May 2024 – August 2024</span>
+      </div>
+      <ul>
+        <li> Architected and implemented Microsoft Access database solution to optimize patient record management and
+streamline clinic operations.</li>
+        <li>Automated data processing workflows using Google Sheets, increasing office staff productivity and reducing manual
+entry errors.</li>
+    </div>
+
+  </div>
+</section>
 
 <!-- projects section -->
 <section id="projects">
-  <h1>Projects</h1>
+  <div class="projects-container">
+    <h1>Projects</h1>
 
-  <!-- Data Analysis -->
-  <h2>Data Analysis</h2>
-  <div class="project-scroll">
-    <div class="project-card" onclick="toggleCard(this)">
-      <img src="project_image.jpg" alt="Project 1" />
-      <h3>US Tech Salary Analysis and Prediction</h3>
-      <p class="preview">Short one line description</p>
-      <div class="project-details">
-        <p><strong>Tools:</strong> Python, SQL</p>
-        <a href="https://github.com/yourprofile/repo" target="_blank">View on GitHub →</a>
+    <!-- Data Analysis -->
+    <h2>Data Analysis</h2>
+    <div class="project-scroll">
+      <div class="project-card" onclick="toggleCard(this)">
+        <img src="images/project_image.jpg" alt="Project 1" />
+        <h3>US Tech Salary Analysis and Prediction</h3>
+        <p class="preview">Short one line description</p>
+        <div class="project-details">
+          <p><strong>Tools:</strong> Python, SQL</p>
+          <a href="https://github.com/yourprofile/repo" target="_blank">View on GitHub</a>
+        </div>
+      </div>
+      <div class="project-card" onclick="toggleCard(this)">
+        <img src="images/project_image.jpg" alt="Project 2" />
+        <h3>Global Space Launch Industry Analysis</h3>
+        <p class="preview">Short one line description</p>
+        <div class="project-details">
+          <p><strong>Tools:</strong> Python, Tableau</p>
+          <a href="https://github.com/yourprofile/repo" target="_blank">View on GitHub</a>
+        </div>
+      </div>
+      <div class="project-card" onclick="toggleCard(this)">
+        <img src="images/project_image.jpg" alt="Project 3" />
+        <h3>Project Name</h3>
+        <p class="preview">Short one line description</p>
+        <div class="project-details">
+          <p><strong>Tools:</strong> SQL, Excel</p>
+          <a href="https://github.com/yourprofile/repo" target="_blank">View on GitHub</a>
+        </div>
+      </div>
+      <div class="project-card" onclick="toggleCard(this)">
+        <img src="images/project_image.jpg" alt="Project 4" />
+        <h3>Project Name</h3>
+        <p class="preview">Short one line description</p>
+        <div class="project-details">
+          <p><strong>Tools:</strong> Python, SQL</p>
+          <a href="https://github.com/yourprofile/repo" target="_blank">View on GitHub</a>
+        </div>
       </div>
     </div>
-    <div class="project-card" onclick="toggleCard(this)">
-      <img src="project_image.jpg" alt="Project 2" />
-      <h3>Global Space Launch Industry Analysis</h3>
-      <p class="preview">Short one line description</p>
-      <div class="project-details">
-        <p><strong>Tools:</strong> Python, Tableau</p>
-        <a href="https://github.com/yourprofile/repo" target="_blank">View on GitHub →</a>
-      </div>
-    </div>
-    <div class="project-card" onclick="toggleCard(this)">
-      <img src="project_image.jpg" alt="Project 3" />
-      <h3>Project Name</h3>
-      <p class="preview">Short one line description</p>
-      <div class="project-details">
-        <p><strong>Tools:</strong> SQL, Excel</p>
-        <a href="https://github.com/yourprofile/repo" target="_blank">View on GitHub →</a>
-      </div>
-    </div>
-    <div class="project-card" onclick="toggleCard(this)">
-      <img src="project_image.jpg" alt="Project 4" />
-      <h3>Project Name</h3>
-      <p class="preview">Short one line description</p>
-      <div class="project-details">
-        <p><strong>Tools:</strong> Python, SQL</p>
-        <a href="https://github.com/yourprofile/repo" target="_blank">View on GitHub →</a>
-      </div>
-    </div>
-  </div>
 
-  <!-- Machine Learning / Software -->
-  <h2>Machine Learning & Software</h2>
-  <div class="project-scroll">
-    <div class="project-card" onclick="toggleCard(this)">
-      <img src="project_image.jpg" alt="Project 1" />
-      <h3>E-Bike Detection</h3>
-      <p class="preview">Short one line description</p>
-      <div class="project-details">
-        <p><strong>Tools:</strong> Python, TensorFlow</p>
-        <a href="https://github.com/yourprofile/repo" target="_blank">View on GitHub →</a>
+    <!-- Machine Learning -->
+    <h2>Machine Learning</h2>
+    <div class="project-scroll">
+      <div class="project-card" onclick="toggleCard(this)">
+        <img src="images/project_image.jpg" alt="Project 1" />
+        <h3>E-Bike Detection</h3>
+        <p class="preview">Short one line description</p>
+        <div class="project-details">
+          <p><strong>Tools:</strong> Python, TensorFlow</p>
+          <a href="https://github.com/yourprofile/repo" target="_blank">View on GitHub</a>
+        </div>
+      </div>
+      <div class="project-card" onclick="toggleCard(this)">
+        <img src="images/project_image.jpg" alt="Project 2" />
+        <h3>HappyMapper</h3>
+        <p class="preview">Short one line description</p>
+        <div class="project-details">
+          <p><strong>Tools:</strong> Python, scikit-learn</p>
+          <a href="https://github.com/yourprofile/repo" target="_blank">View on GitHub</a>
+        </div>
+      </div>
+      <div class="project-card" onclick="toggleCard(this)">
+        <img src="images/project_image.jpg" alt="Project 3" />
+        <h3>Emotions Over Text Detection</h3>
+        <p class="preview">Short one line description</p>
+        <div class="project-details">
+          <p><strong>Tools:</strong> C#, .NET</p>
+          <a href="https://github.com/yourprofile/repo" target="_blank">View on GitHub</a>
+        </div>
+      </div>
+      <div class="project-card" onclick="toggleCard(this)">
+        <img src="images/project_image.jpg" alt="Project 4" />
+        <h3>AI Dietary Expert</h3>
+        <p class="preview">Short one line description</p>
+        <div class="project-details">
+          <p><strong>Tools:</strong> Python, Flask</p>
+          <a href="https://github.com/yourprofile/repo" target="_blank">View on GitHub</a>
+        </div>
       </div>
     </div>
-    <div class="project-card" onclick="toggleCard(this)">
-      <img src="project_image.jpg" alt="Project 2" />
-      <h3>HappyMapper</h3>
-      <p class="preview">Short one line description</p>
-      <div class="project-details">
-        <p><strong>Tools:</strong> Python, scikit-learn</p>
-        <a href="https://github.com/yourprofile/repo" target="_blank">View on GitHub →</a>
+
+    <!-- Software Engineering -->
+    <h2>Software Engineering</h2>
+    <div class="project-scroll">
+      <div class="project-card" onclick="toggleCard(this)">
+        <img src="images/project_image.jpg" alt="Project 1" />
+        <h3>E-Bike Detection</h3>
+        <p class="preview">Short one line description</p>
+        <div class="project-details">
+          <p><strong>Tools:</strong> Python, TensorFlow</p>
+          <a href="https://github.com/yourprofile/repo" target="_blank">View on GitHub</a>
+        </div>
       </div>
-    </div>
-    <div class="project-card" onclick="toggleCard(this)">
-      <img src="project_image.jpg" alt="Project 3" />
-      <h3>Pique</h3>
-      <p class="preview">Short one line description</p>
-      <div class="project-details">
-        <p><strong>Tools:</strong> C#, .NET</p>
-        <a href="https://github.com/yourprofile/repo" target="_blank">View on GitHub →</a>
+      <div class="project-card" onclick="toggleCard(this)">
+        <img src="images/project_image.jpg" alt="Project 2" />
+        <h3>HappyMapper</h3>
+        <p class="preview">Short one line description</p>
+        <div class="project-details">
+          <p><strong>Tools:</strong> Python, scikit-learn</p>
+          <a href="https://github.com/yourprofile/repo" target="_blank">View on GitHub</a>
+        </div>
       </div>
-    </div>
-    <div class="project-card" onclick="toggleCard(this)">
-      <img src="project_image.jpg" alt="Project 4" />
-      <h3>Project Name</h3>
-      <p class="preview">Short one line description</p>
-      <div class="project-details">
-        <p><strong>Tools:</strong> Python, Flask</p>
-        <a href="https://github.com/yourprofile/repo" target="_blank">View on GitHub →</a>
+      <div class="project-card" onclick="toggleCard(this)">
+        <img src="images/project_image.jpg" alt="Project 3" />
+        <h3>Pique</h3>
+        <p class="preview">Short one line description</p>
+        <div class="project-details">
+          <p><strong>Tools:</strong> C#, .NET</p>
+          <a href="https://github.com/yourprofile/repo" target="_blank">View on GitHub</a>
+        </div>
+      </div>
+      <div class="project-card" onclick="toggleCard(this)">
+        <img src="images/project_image.jpg" alt="Project 4" />
+        <h3>Project Name</h3>
+        <p class="preview">Short one line description</p>
+        <div class="project-details">
+          <p><strong>Tools:</strong> Python, Flask</p>
+          <a href="https://github.com/yourprofile/repo" target="_blank">View on GitHub</a>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- Skills section -->
+<section id="skills">
+  <div class="skills-container">
+    <h1>Skills</h1>
 
+    <h2>Programming Languages</h2>
+    <div class="skills-grid row-10">
+      <i class="devicon-python-plain colored"></i>
+      <i class="devicon-javascript-plain colored"></i>
+      <i class="devicon-cplusplus-plain colored"></i>
+      <i class="devicon-csharp-plain colored"></i>
+      <i class="devicon-mysql-plain colored"></i>
+      <i class="devicon-postgresql-plain colored"></i>
+      <i class="devicon-html5-plain colored"></i>
+      <i class="devicon-css3-plain colored"></i>
+      <i class="devicon-react-plain colored"></i>
+      <i class="devicon-r-plain colored"></i>
+    </div>
+
+    <h2>Libraries</h2>
+    <div class="skills-grid">
+      <i class="devicon-scikitlearn-plain colored"></i>
+      <i class="devicon-pytorch-plain colored"></i>
+      <i class="devicon-opencv-plain colored"></i>
+      <i class="devicon-matplotlib-plain colored"></i>
+      <i class="devicon-numpy-plain colored"></i>
+      <i class="devicon-visualstudio-plain colored"></i>
+    </div>
+
+    <h2>Tools</h2>
+    <div class="skills-grid">
+      <i class="devicon-github-plain colored"></i>
+      <i class="devicon-firebase-plain colored"></i>
+      <i class="devicon-mongodb-plain colored"></i>
+      <i class="devicon-vscode-plain colored"></i>
+    </div>
+  </div>
+</section>
+
+<!-- contacts section -->
+<section id="contacts">
+  <div class="contacts-container">
+    <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+        <div class="contact-left-title">
+          <h2>Send me a message! (About anything...seriously)</h2>
+          <hr>
+        </div>
+        <input type="hidden" name="access_key" value="9feda151-ec17-43b9-9ec1-be6452c7d5ee">
+        <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
+        <input type="email" name="name" placeholder="Your Email" class="contact-inputs" required>
+        <textarea name = "messsage" placeholder="Your Message" class="contact-inputs" required></textarea>
+        <button type="submit">Submit</button>
+    </form>
+    <div class="contact-right">
+      <img src="" alt="" />
+    </div>
+  </div>
+</section>
 
   </body>
 </html>
