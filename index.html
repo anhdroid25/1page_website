@@ -4,9 +4,11 @@
     <meta charset="UTF-8" /> <!-- handles special characters -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- restriction to mobile scaling -->
     <title>Anh Nguyen</title> <!-- shows up on the browser tab -->
-    <link rel="stylesheet" href="style.css" /> <!-- bring in the styles -->
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&display=swap" rel="stylesheet" /> <!-- bring in the styles -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"> <!-- devicon coding skills logo -->
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   </head>
   <body> <!-- everything the user sees goes in here -->
 
@@ -27,32 +29,43 @@
 <!-- home section -->
 <section id="home">
   <img src="images/main.jpg" alt="Photo of Anh Nguyen" />
-  <div>
-    <p>Hello! I am</p>
-    <h1>Anh</h1>
+  <div class="container">
+    <p class="text greeting-line">Hello, I am</p>
+    <p class="text name-line">Anh Nguyen</p>
+    <p class="subtitle">Aspiring <span id="rotating-title">Data Analyst</span></p>
+    <div class="social-links">
+      <a href="https://github.com/anhdroid25" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/anhng25/" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
   </div>
 </section>
 
 <!-- about me section -->
 <section id="aboutme">
   <div class="aboutme-row">
-    <!-- 2 photos stacked on the left -->
-    <div class="aboutme-grid-left">
+    <div class="aboutme-photo">
       <img src="images/scenary_photo.jpg" alt="Scenery" />
       <img src="images/steak_photo.jpg" alt="Steak" />
-    </div>
-    <!-- bio in the middle -->
-    <div class="aboutme-block">
-      <h1>About Me</h1>
-      <p>Glad to see you here! There are 3 different ways to pronounce my name but only 1 is correct (you can always ask me but I actually do not mind how you say it). I am an aspiring data analyst/engineer and machine learning engineer. I am attending CSULB and will be graduating in Spring 2026. I love learning new things so please, if you can teach me whatever that you are passionate about, be my guest!</p>
-      <p><strong>Hobbies:</strong> Volleyball, DJing, Watching Videos About Cars and Rockets, and Traveling</p>
-      <p><strong>Favorite Foods:</strong> Steak (medium rare), Banh Mi, Pho, Beignets</p>
-      <p><strong>I Love:</strong> My Family and Dog (Bobo), My DJ Deck, and My Camry!</p>
-    </div>
-    <!-- 2 photos stacked on the right -->
-    <div class="aboutme-grid-right">
       <img src="images/dj_photo.jpg" alt="DJing" />
       <img src="images/bobo.jpg" alt="Bobo" />
+    </div>
+    <div class="aboutme-block">
+      <h1>About Me</h1>
+      <p class="aboutme-bio">Glad to see you here! There are 3 different ways to pronounce my name, but only 1 is correct (you can always ask me, I don't mind either way). I'm an aspiring data analyst/engineer and ML engineer attending CSULB, graduating Spring 2026. I work with tools like Python, SQL, and machine learning frameworks to turn raw data into meaningful insights. I hope to utilize my analytical and communication skills to explore the inner workings of a business. My short-term goal is to land an entry-level job as a Business Data Analyst, and my long-term goal is to apply what I learn to start a business of my own and grow into a leadership role. Feel free to browse my projects below, and if you're passionate about something, teach me!</p>
+      <div class="aboutme-cards">
+        <div class="aboutme-card">
+          <strong>Hobbies</strong>
+          <p>Volleyball, DJing, Watching Videos About Cars & Rockets, Traveling</p>
+        </div>
+        <div class="aboutme-card">
+          <strong>Favorite Foods</strong>
+          <p>Steak (medium rare), Banh Mi, Pho, Beignets</p>
+        </div>
+        <div class="aboutme-card">
+          <strong>I Love</strong>
+          <p>My Family & Dog (Bobo), My DJ Deck, and My Camry!</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -64,6 +77,20 @@
     <h1>Experiences</h1>
 
     <!-- one experience entry -->
+    <div class="experience-card">
+      <div class="experience-header">
+        <div>
+          <h2>AI/Backend Engineer</h2>
+          <h3>Starbound — HappyMapper</h3>
+        </div>
+        <span class="experience-date">Sep. 2025 – Dec. 2025</span>
+      </div>
+      <ul>
+        <li>Served as lead AI engineer, architecting the full Gemini Vision AI integration from prompt design to production, achieving 98% menu extraction accuracy.</li>
+        <li>Built and deployed FastAPI backend with RESTful endpoints processing extraction requests in under 10 seconds end-to-end.</li>
+      </ul>
+    </div>
+
     <div class="experience-card">
       <div class="experience-header">
         <div>
@@ -91,6 +118,7 @@ challenging angles.</li>
       <ul>
         <li>Orchestrated data collection, organization, and statistical analysis for faculty-led research initiatives.</li>
         <li>Conducted literature reviews and synthesized findings to strengthen presentations and grant proposals</li>
+      </ul>
     </div>
 
     <div class="experience-card">
@@ -104,8 +132,8 @@ challenging angles.</li>
       <ul>
         <li> Architected and implemented Microsoft Access database solution to optimize patient record management and
 streamline clinic operations.</li>
-        <li>Automated data processing workflows using Google Sheets, increasing office staff productivity and reducing manual
-entry errors.</li>
+        <li>Automated data processing workflows using Google Sheets, increasing office staff productivity and reducing manual entry errors.</li>
+      </ul>
     </div>
 
   </div>
@@ -119,123 +147,63 @@ entry errors.</li>
     <!-- Data Analysis -->
     <h2>Data Analysis</h2>
     <div class="project-scroll">
-      <div class="project-card" onclick="toggleCard(this)">
-        <img src="images/project_image.jpg" alt="Project 1" />
+      <div class="project-card">
+        <img src="images/tech_salary.jpg" alt="Project 1" />
         <h3>US Tech Salary Analysis and Prediction</h3>
-        <p class="preview">Short one line description</p>
-        <div class="project-details">
-          <p><strong>Tools:</strong> Python, SQL</p>
-          <a href="https://github.com/yourprofile/repo" target="_blank">View on GitHub</a>
-        </div>
+        <p class="preview">Compared U.S. tech salaries and predicted pay.</p>
+        <button class="view-btn" onclick="openModal('US Tech Salary Analysis and Prediction', 'Analyzed 3,299 U.S. Stack Overflow 2024 responses to identify salary drivers (role, experience, education, remote work, industry) and compared Linear Regression, Random Forest, and XGBoost; XGBoost performed best (R² = 0.239).', 'Python, Pandas, NumPy, Seaborn, Scikit-learn, XGBoost', 'https://github.com/anhdroid25/tech_salary_analysis')">View Project</button>
       </div>
-      <div class="project-card" onclick="toggleCard(this)">
-        <img src="images/project_image.jpg" alt="Project 2" />
+      <div class="project-card">
+        <img src="images/space_launch.jpg" alt="Project 2" />
         <h3>Global Space Launch Industry Analysis</h3>
-        <p class="preview">Short one line description</p>
-        <div class="project-details">
-          <p><strong>Tools:</strong> Python, Tableau</p>
-          <a href="https://github.com/yourprofile/repo" target="_blank">View on GitHub</a>
-        </div>
+        <p class="preview">Built a Power BI dashboard on global launch trends.</p>
+        <button class="view-btn" onclick="openModal('Global Space Launch Industry Analysis', 'Built an interactive Power BI analysis of global space launches using Keith D42\'s Kaggle dataset (rocket-launch-industry), highlighting launch volume trends, company success rates, and payload capacity by rocket configuration.', 'Power BI, DAX, Power Query, Kaggle Dataset', 'https://github.com/yourprofile/repo', 'Download .pbix')">View Project</button>
       </div>
-      <div class="project-card" onclick="toggleCard(this)">
-        <img src="images/project_image.jpg" alt="Project 3" />
-        <h3>Project Name</h3>
-        <p class="preview">Short one line description</p>
-        <div class="project-details">
-          <p><strong>Tools:</strong> SQL, Excel</p>
-          <a href="https://github.com/yourprofile/repo" target="_blank">View on GitHub</a>
-        </div>
-      </div>
-      <div class="project-card" onclick="toggleCard(this)">
-        <img src="images/project_image.jpg" alt="Project 4" />
-        <h3>Project Name</h3>
-        <p class="preview">Short one line description</p>
-        <div class="project-details">
-          <p><strong>Tools:</strong> Python, SQL</p>
-          <a href="https://github.com/yourprofile/repo" target="_blank">View on GitHub</a>
-        </div>
+      <div class="project-card">
+        <img src="images/customer_churn.jpeg" alt="Project 3" />
+        <h3>Customer Churn Data Visualization</h3>
+        <p class="preview">Designed an interactive Tableau dashboard analyzing telecom customer churn.</p>
+        <button class="view-btn" onclick="openModal('Customer Churn Data Visualization', 'Built a comprehensive interactive Tableau dashboard for CECS 450 Data Visualization exploring telecom customer churn. Covered exploratory analysis, churn rate KPIs, geographic mapping, customer demographics, service usage, billing patterns, and revenue trends across 12 dashboard views with filters and storytelling.', 'Tableau', 'https://public.tableau.com/app/profile/anh.nguyen1268/viz/CECS450_Telecom_Churn_Dashboard_Anh/MainDashboard')">View Project</button>
       </div>
     </div>
 
     <!-- Machine Learning -->
     <h2>Machine Learning</h2>
     <div class="project-scroll">
-      <div class="project-card" onclick="toggleCard(this)">
-        <img src="images/project_image.jpg" alt="Project 1" />
+      <div class="project-card">
+        <img src="images/ebike.png" alt="Project 1" />
         <h3>E-Bike Detection</h3>
-        <p class="preview">Short one line description</p>
-        <div class="project-details">
-          <p><strong>Tools:</strong> Python, TensorFlow</p>
-          <a href="https://github.com/yourprofile/repo" target="_blank">View on GitHub</a>
-        </div>
+        <p class="preview">Real-time rider and e-bike detection device for mall safety.</p>
+        <button class="view-btn" onclick="openModal('E-Bike Detection', 'Built a real-time computer vision pipeline for rider and e-bike detection using YOLO on live camera streams, with a Jetson-optimized GPU path and TensorRT acceleration for faster inference.', 'Python, OpenCV, YOLO, Jetson Orin, TensorRT', 'https://github.com/anhdroid25/mall_safety')">View Project</button>
       </div>
-      <div class="project-card" onclick="toggleCard(this)">
-        <img src="images/project_image.jpg" alt="Project 2" />
-        <h3>HappyMapper</h3>
-        <p class="preview">Short one line description</p>
-        <div class="project-details">
-          <p><strong>Tools:</strong> Python, scikit-learn</p>
-          <a href="https://github.com/yourprofile/repo" target="_blank">View on GitHub</a>
-        </div>
+      <div class="project-card">
+        <img src="images/text_message.jpg" alt="Project 2" />
+        <h3>Emotions Over Text Prediction</h3>
+        <p class="preview">Classified text emotions with 74% accuracy using 7 ML models.</p>
+        <button class="view-btn" onclick="openModal('Emotions Over Text Prediction', 'Built a multi-class emotion classifier trained on 31,000+ labeled text samples across 8 emotion categories (anger, disgust, fear, joy, neutral, sadness, shame, surprise). Applied TF-IDF vectorization, SMOTE for class imbalance, and compared 7 models — Logistic Regression, Naive Bayes, SVM, Decision Tree, MLP, Random Forest, and XGBoost — with GridSearchCV tuning, achieving ~74% accuracy.', 'Python, Scikit-learn, XGBoost, NLTK, SMOTE, TF-IDF, Pandas', 'https://github.com/porterclev/456-project')">View Project</button>
       </div>
-      <div class="project-card" onclick="toggleCard(this)">
-        <img src="images/project_image.jpg" alt="Project 3" />
-        <h3>Emotions Over Text Detection</h3>
-        <p class="preview">Short one line description</p>
-        <div class="project-details">
-          <p><strong>Tools:</strong> C#, .NET</p>
-          <a href="https://github.com/yourprofile/repo" target="_blank">View on GitHub</a>
-        </div>
-      </div>
-      <div class="project-card" onclick="toggleCard(this)">
-        <img src="images/project_image.jpg" alt="Project 4" />
+      <div class="project-card">
+        <img src="images/dietary.jpg" alt="Project 3" />
         <h3>AI Dietary Expert</h3>
-        <p class="preview">Short one line description</p>
-        <div class="project-details">
-          <p><strong>Tools:</strong> Python, Flask</p>
-          <a href="https://github.com/yourprofile/repo" target="_blank">View on GitHub</a>
-        </div>
+        <p class="preview">Customizable AI nutrition planner web app.</p>
+        <button class="view-btn" onclick="openModal('AI Dietary Expert', 'Built a full-stack AI nutrition assistant that uses user profile inputs like age, height, weight, medical conditions, dietary preferences, and health goals to generate personalized meal guidance.', 'TypeScript, React, Tailwind CSS, Axios, FastAPI, OpenAI API', 'https://github.com/adrnabrm/beachhacks-spring25')">View Project</button>
       </div>
     </div>
 
     <!-- Software Engineering -->
     <h2>Software Engineering</h2>
     <div class="project-scroll">
-      <div class="project-card" onclick="toggleCard(this)">
-        <img src="images/project_image.jpg" alt="Project 1" />
-        <h3>E-Bike Detection</h3>
-        <p class="preview">Short one line description</p>
-        <div class="project-details">
-          <p><strong>Tools:</strong> Python, TensorFlow</p>
-          <a href="https://github.com/yourprofile/repo" target="_blank">View on GitHub</a>
-        </div>
-      </div>
-      <div class="project-card" onclick="toggleCard(this)">
-        <img src="images/project_image.jpg" alt="Project 2" />
+      <div class="project-card">
+        <img src="images/happy_mapper.png" alt="Project 1" />
         <h3>HappyMapper</h3>
-        <p class="preview">Short one line description</p>
-        <div class="project-details">
-          <p><strong>Tools:</strong> Python, scikit-learn</p>
-          <a href="https://github.com/yourprofile/repo" target="_blank">View on GitHub</a>
-        </div>
+        <p class="preview">Finds nearby happy-hour deals in real time.</p>
+        <button class="view-btn" onclick="openModal('HappyMapper', 'Built a real-time happy-hour discovery app where users can find nearby deals, upload menu photos, and extract deal details with an AI parser for faster local recommendations.', 'React Native, Flask, Firebase, Firestore, Nexa AI, Vercel', 'https://github.com/WinstonTa/Starbound-Atlas-2025')">View Project</button>
       </div>
-      <div class="project-card" onclick="toggleCard(this)">
-        <img src="images/project_image.jpg" alt="Project 3" />
+      <div class="project-card">
+        <img src="images/pique.png" alt="Project 2" />
         <h3>Pique</h3>
-        <p class="preview">Short one line description</p>
-        <div class="project-details">
-          <p><strong>Tools:</strong> C#, .NET</p>
-          <a href="https://github.com/yourprofile/repo" target="_blank">View on GitHub</a>
-        </div>
-      </div>
-      <div class="project-card" onclick="toggleCard(this)">
-        <img src="images/project_image.jpg" alt="Project 4" />
-        <h3>Project Name</h3>
-        <p class="preview">Short one line description</p>
-        <div class="project-details">
-          <p><strong>Tools:</strong> Python, Flask</p>
-          <a href="https://github.com/yourprofile/repo" target="_blank">View on GitHub</a>
-        </div>
+        <p class="preview">Local events hosting Android app with Meet-in-the-Middle function</p>
+        <button class="view-btn" onclick="openModal('Pique', 'Pique is a community-driven Android app that connects people through local events. Users can discover and post events happening nearby, leave reviews, and track attendance — all while competing on a live leaderboard that ranks who\'s the most active in their community. The standout Meet-in-the-Middle feature intelligently finds events at the geographic midpoint between friends, making group hangout planning effortless.', 'React Native, Python, Firebase, Google Maps API, Stripe', 'https://github.com/CamilleWong-elif/Pique_491B')">View Project</button>
       </div>
     </div>
   </div>
@@ -300,5 +268,17 @@ entry errors.</li>
   </div>
 </section>
 
+<!-- project modal overlay -->
+<div id="project-modal" class="modal-overlay" onclick="closeModal(event)">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <h2 id="modal-title"></h2>
+    <p id="modal-description"></p>
+    <p id="modal-tools"></p>
+    <a id="modal-link" href="" target="_blank">View on GitHub</a>
+  </div>
+</div>
+
+<script src="script.js"></script>
   </body>
 </html>
