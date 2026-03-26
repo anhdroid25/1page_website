@@ -2,6 +2,7 @@
 setTimeout(() => {
   document.querySelector('.subtitle').style.opacity = '1'
   document.querySelector('.social-links').style.opacity = '1'
+  document.querySelector('.home-stats').style.opacity = '1'
 }, 3000)
 
 const titles = ['Data Analyst', 'Data Engineer', 'Business  Analyst']
