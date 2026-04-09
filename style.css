@@ -357,7 +357,6 @@ nav ul li a:hover::after {
 /* ================= EXPERIENCES ================= */
 
 #experiences {
-  min-height: 100vh;
   padding: 120px 80px 80px;
   display: flex;
   justify-content: center;
@@ -444,7 +443,6 @@ nav ul li a:hover::after {
 /* ================= PROJECTS ================= */
 
 #projects {
-  min-height: 100vh;
   padding: 10px 60px 160px;
   display: flex;
   justify-content: center;
@@ -581,7 +579,6 @@ nav ul li a:hover::after {
 /* ================= SKILLS ================= */
 
 #skills {
-  min-height: 100vh;
   padding: 120px 80px 80px;
   display: flex;
   justify-content: center;
@@ -758,13 +755,11 @@ nav ul li a:hover::after {
 /* Offset for fixed navbar when scrolling */
 section {
   scroll-margin-top: 100px;
-  width: min(1400px, 100%);
-  margin: 0 auto;
+  width: 100%;
 }
 
 /* ================= CONTACTS ================= */
 #contacts {
-  min-height: 100vh;
   padding: 120px 80px 80px;
   display: flex;
   justify-content: center;
@@ -1048,8 +1043,8 @@ section {
 
   /* remove full-screen forcing on all sections */
   #aboutme, #experiences, #projects, #skills, #contacts {
-    min-height: 0 !important;
-    height: auto !important;
+    min-height: 0;
+    height: auto;
   }
 
   /* --- ABOUT ME --- */
