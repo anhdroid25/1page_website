@@ -1048,8 +1048,8 @@ section {
 
   /* remove full-screen forcing on all sections */
   #aboutme, #experiences, #projects, #skills, #contacts {
-    min-height: 0;
-    height: auto;
+    min-height: 0 !important;
+    height: auto !important;
   }
 
   /* --- ABOUT ME --- */
