@@ -99,6 +99,8 @@ nav ul li a:hover::after {
   gap: 120px;
   height: 100vh;
   padding-top: 100px;
+  position: relative;
+  overflow: hidden;
 }
 
 #home img {
@@ -131,7 +133,7 @@ nav ul li a:hover::after {
 
 /* "Hello, I am" — 11 chars, types in 1.5s, cursor disappears after */
 .greeting-line {
-  font-size: 2.5vw;
+  font-size: clamp(16px, 2.5vw, 36px);
   font-weight: normal;
   color: #90a4b8;
   border-right: 4px solid #e8eaf0;
@@ -147,7 +149,7 @@ nav ul li a:hover::after {
 
 /* "Anh Nguyen" — 10 chars, starts after 1.5s, cursor stays after */
 .name-line {
-  font-size: 4vw;
+  font-size: clamp(28px, 4vw, 58px);
   font-family: 'Orbitron', monospace;
   font-weight: 900;
   letter-spacing: 6px;
@@ -181,7 +183,7 @@ nav ul li a:hover::after {
 }
 
 .subtitle {
-  font-size: 1.8vw;
+  font-size: clamp(14px, 1.8vw, 26px);
   font-family: 'Courier New', monospace;
   color: #90a4b8;
   letter-spacing: 2px;
@@ -200,7 +202,7 @@ nav ul li a:hover::after {
 }
 
 .social-links a {
-  font-size: 2vw;
+  font-size: clamp(20px, 2vw, 30px);
   color: #90a4b8;
   text-decoration: none;
   transition: color 0.2s ease;
@@ -227,7 +229,7 @@ nav ul li a:hover::after {
 }
 
 .stat-number {
-  font-size: 2.4vw;
+  font-size: clamp(22px, 2.4vw, 38px);
   font-weight: 900;
   font-family: 'Orbitron', monospace;
   color: #e8eaf0;
@@ -235,7 +237,7 @@ nav ul li a:hover::after {
 }
 
 .stat-label {
-  font-size: 0.85vw;
+  font-size: clamp(10px, 0.85vw, 14px);
   color: #90a4b8;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -837,4 +839,257 @@ section {
   background: linear-gradient(270deg, #1a78c2, #4fc3f7);
   cursor: pointer;
   font-weight: bold;
+}
+
+/* ================= CANVAS PARTICLE BG ================= */
+#home-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+#home img,
+#home .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* ================= TERMINAL CARD ================= */
+.terminal-card {
+  margin-top: 24px;
+  background: #0d1a2e;
+  border: 1px solid #1e3a5f;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 24px rgba(79, 195, 247, 0.1), 0 4px 16px rgba(0,0,0,0.4);
+  opacity: 0;
+  transition: opacity 1s ease;
+  text-align: left;
+}
+
+.terminal-header {
+  background: #152032;
+  padding: 8px 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border-bottom: 1px solid #1e3a5f;
+  text-align: left;
+}
+
+.dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.dot.red    { background: #ff5f57; }
+.dot.yellow { background: #ffbd2e; }
+.dot.green  { background: #28ca41; }
+
+.terminal-fname {
+  margin-left: 8px;
+  font-size: 12px;
+  color: #90a4b8;
+  font-family: 'Courier New', monospace;
+}
+
+.terminal-body {
+  padding: 14px 18px;
+  font-size: 13.5px;
+  line-height: 1.9;
+  margin: 0;
+  font-family: 'Courier New', monospace;
+}
+
+.t-kw  { color: #c792ea; }
+.t-var { color: #82aaff; }
+.t-op  { color: #89ddff; }
+.t-key { color: #f07178; }
+.t-str { color: #c3e88d; }
+
+/* ================= LOGO GLITCH ================= */
+.logo:hover {
+  animation: logo-glitch 0.45s steps(2) 1;
+}
+
+@keyframes logo-glitch {
+  0%   { text-shadow:  2px 0 #ff0080, -2px 0 #00ffff; transform: skewX(0deg); }
+  20%  { text-shadow: -2px 0 #ff0080,  2px 0 #00ffff; transform: skewX(-2deg); }
+  40%  { text-shadow:  2px 0 #ff0080, -2px 0 #00ffff; transform: skewX(1.5deg); }
+  60%  { text-shadow: -2px 0 #ff0080,  2px 0 #00ffff; transform: skewX(-1deg); }
+  80%  { text-shadow:  2px 0 #ff0080, -2px 0 #00ffff; transform: skewX(0.5deg); }
+  100% { text-shadow: none;                            transform: skewX(0deg); }
+}
+
+/* ================= NEON GLOW HEADINGS ================= */
+#aboutme h1,
+#experiences h1,
+#projects h1,
+#skills h1 {
+  text-shadow: 0 0 18px rgba(79, 195, 247, 0.35);
+}
+
+.skills-grid i:hover {
+  filter: drop-shadow(0 0 8px rgba(79, 195, 247, 0.6));
+}
+
+/* ================= HAMBURGER BUTTON ================= */
+.mobile-only { display: none; }
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  z-index: 1001;
+}
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #e8eaf0;
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ================= TABLET  (769px – 1024px) ================= */
+@media (min-width: 769px) and (max-width: 1024px) {
+  nav ul { gap: 40px; font-size: 16px; }
+
+  #home { gap: 60px; }
+  #home img { width: 320px; height: 320px; }
+
+  #aboutme { padding: 20px 40px; }
+  .aboutme-photo { width: 360px; }
+  .aboutme-photo img { width: 170px; height: 195px; }
+  .aboutme-bio { font-size: 16px; }
+  .aboutme-card p { font-size: 15px; }
+
+  #experiences { padding: 100px 40px 60px; }
+  #projects    { padding: 10px 30px 80px; }
+  #skills      { padding: 100px 40px 60px; }
+  #contacts    { padding: 100px 40px 60px; }
+  .contact-inputs { width: 300px; }
+}
+
+/* ================= MOBILE  (≤ 768px) ================= */
+@media (max-width: 768px) {
+
+  /* --- NAV --- */
+  nav {
+    padding: 14px 20px;
+    flex-wrap: wrap;
+  }
+  nav ul {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    width: 100%;
+    padding: 16px 0;
+    border-top: 1px solid #1e3a5f;
+    order: 3;
+    font-size: 16px;
+  }
+  nav ul.open  { display: flex; }
+  .hamburger   { display: flex; }
+  .contact-wrapper { display: none; }
+  .mobile-only { display: block; }
+
+  /* --- HOME --- */
+  #home {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+    height: auto;
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding: 80px 20px 40px;
+  }
+  #home img { width: 160px; height: 160px; }
+  .container { width: 100%; max-width: 100%; }
+
+  /* disable typing animation — show text immediately on mobile */
+  .greeting-line {
+    font-size: clamp(14px, 3.8vw, 20px);
+    animation: none;
+    width: auto;
+    overflow: visible;
+    border-right: none;
+  }
+  .name-line {
+    font-size: clamp(26px, 7vw, 42px);
+    letter-spacing: 3px;
+    animation: none;
+    width: auto;
+    overflow: visible;
+    border-right: none;
+  }
+  .subtitle      { font-size: clamp(13px, 3.5vw, 18px); opacity: 1; transition: none; }
+  .social-links  { opacity: 1; transition: none; }
+  .social-links a { font-size: clamp(22px, 6vw, 30px); }
+  .home-stats    { opacity: 1; transition: none; }
+  .stat-number   { font-size: clamp(20px, 5.5vw, 30px); }
+  .stat-label    { font-size: clamp(9px,  2.5vw, 12px); }
+  .terminal-card { opacity: 1; transition: none; width: 100%; }
+  .terminal-body { font-size: 12px; padding: 10px 14px; }
+
+  /* --- ABOUT ME --- */
+  #aboutme {
+    height: auto;
+    min-height: 100vh;
+    padding: 80px 20px 40px;
+    overflow: visible;
+  }
+  .aboutme-row    { flex-direction: column; gap: 24px; }
+  .aboutme-photo  { width: 100%; }
+  .aboutme-photo img { width: 100%; height: 150px; }
+  .aboutme-block  { max-width: 100%; }
+  #aboutme h1     { font-size: 30px; }
+  .aboutme-bio    { font-size: 14px; margin: 4px 0; }
+  .aboutme-cards  { flex-direction: column; gap: 10px; }
+  .aboutme-card p { font-size: 14px; }
+
+  /* --- EXPERIENCES --- */
+  #experiences       { padding: 80px 20px 40px; }
+  #experiences h1    { font-size: 32px; }
+  .experience-header { flex-direction: column; gap: 2px; }
+  .experience-card h2 { font-size: 17px; }
+  .experience-card h3 { font-size: 14px; }
+  .experience-date    { font-size: 12px; }
+  .experience-card ul li { font-size: 13px; line-height: 1.6; }
+
+  /* --- PROJECTS --- */
+  #projects    { padding: 80px 16px 60px; }
+  #projects h1 { font-size: 32px; }
+  #projects h2 { font-size: 20px; margin: 20px 0 10px; }
+  .project-scroll { justify-content: flex-start; }
+
+  /* --- SKILLS --- */
+  #skills    { padding: 80px 20px 40px; }
+  #skills h1 { font-size: 32px; }
+  .skills-grid.row-10 { grid-template-columns: repeat(5, 1fr); }
+  .skills-grid        { grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .skills-grid i      { font-size: 44px; }
+
+  /* --- CONTACTS --- */
+  #contacts { padding: 80px 20px 40px; }
+  .contacts-container  { flex-direction: column; align-items: flex-start; gap: 24px; }
+  .contact-left        { width: 100%; }
+  .contact-left-title h2 { font-size: 22px; }
+  .contact-inputs      { width: 100%; box-sizing: border-box; }
+  .contact-left textarea { height: 120px; }
+  .contact-left button   { width: 100%; justify-content: center; }
 }

@@ -15,19 +15,26 @@
     <!-- top navigation bar -->
     <nav>
       <a href="#home" class="logo">Anh Nguyen</a> <!-- clicking name takes you back to top -->
-      <ul> <!-- the three nav links in the middle -->
+      <ul id="nav-menu"> <!-- the three nav links in the middle -->
         <li><a href="#aboutme">About Me</a></li>
         <li><a href="#experiences">Experiences</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#skills">Skills</a></li>
+        <li class="mobile-only"><a href="#contacts">Contact Me</a></li>
       </ul>
       <div class="contact-wrapper">
         <a href="#contacts" class="contact-btn">Contact Me</a> <!-- the outlined button on the right -->
       </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </nav>
 
 <!-- home section -->
 <section id="home">
+  <canvas id="home-canvas"></canvas>
   <img src="images/main.jpg" alt="Photo of Anh Nguyen" />
   <div class="container">
     <p class="text greeting-line">Hello, I am</p>
@@ -42,6 +49,20 @@
         <span class="stat-number">4+</span>
         <span class="stat-label">Years Experience</span>
       </div>
+    </div>
+    <div class="terminal-card">
+      <div class="terminal-header">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="terminal-fname">profile.js</span>
+      </div>
+      <pre class="terminal-body"><code><span class="t-kw">const</span> <span class="t-var">developer</span> <span class="t-op">=</span> {
+  <span class="t-key">name</span>:   <span class="t-str">"Anh Nguyen"</span>,
+  <span class="t-key">degree</span>: <span class="t-str">"CS @ CSULB '26"</span>,
+  <span class="t-key">focus</span>:  [<span class="t-str">"ML"</span>, <span class="t-str">"Software"</span>, <span class="t-str">"Data"</span>],
+  <span class="t-key">status</span>: <span class="t-str">"Open to Work ✓"</span>
+}</code></pre>
     </div>
   </div>
 </section>
