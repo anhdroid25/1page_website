@@ -9,7 +9,7 @@
 
 :root {
   --bg:        #0a1628;
-  --bg-alt:    #0c1d34;
+  --bg-alt:    #0d2540;
   --bg-card:   #112240;
   --accent:    #4fc3f7;
   --accent-dk: #1e3a5f;
@@ -627,7 +627,9 @@ section {
    SKILLS
    ============================================================ */
 #skills {
+  display: block;
   padding: 100px 80px;
+  border-top: 1px solid var(--accent-dk);
 }
 
 .skills-container {
@@ -692,7 +694,9 @@ section {
    CONTACTS
    ============================================================ */
 #contacts {
+  display: block;
   padding: 100px 80px;
+  border-top: 1px solid var(--accent-dk);
 }
 
 .contacts-container {
