@@ -16,7 +16,7 @@
   --txt:       #e8eaf0;
   --txt-sub:   #90a4b8;
   --txt-muted: #b0bec5;
-  --nav-h:     68px;
+  --nav-h:     84px;
   --radius:    10px;
   --shadow:    0 4px 24px rgba(0,0,0,.45);
   --max-w:     1200px;
@@ -52,7 +52,7 @@ nav {
 .logo {
   font-family: 'Orbitron', monospace;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 24px;
   color: var(--txt);
   text-decoration: none;
   letter-spacing: 1px;
@@ -76,7 +76,7 @@ nav ul {
   list-style: none;
   display: flex;
   gap: 36px;
-  font-size: 15.5px;
+  font-size: 17px;
 }
 
 nav ul li a {
