@@ -123,6 +123,7 @@ nav ul li a:hover::after { width: 100%; }
 section {
   scroll-margin-top: var(--nav-h);
   width: 100%;
+  min-height: 100vh;
 }
 
 /* Alternating section backgrounds */
@@ -1001,6 +1002,11 @@ section {
   /* All content sections */
   #aboutme, #experiences, #projects, #skills, #contacts {
     padding: 64px 20px;
+  }
+
+  /* Use dynamic viewport height on mobile so browser chrome is accounted for */
+  section {
+    min-height: 100dvh;
   }
 
   /* About Me */
