@@ -1,21 +1,20 @@
-<!DOCTYPE html> <!-- indicating this is HTML -->
-<html lang="en"> <!-- blueprint of whole page-->
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <meta charset="UTF-8" /> <!-- handles special characters -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- restriction to mobile scaling -->
-    <title>Anh Nguyen</title> <!-- shows up on the browser tab -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anh Nguyen</title>
     <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&display=swap" rel="stylesheet" /> <!-- bring in the styles -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"> <!-- devicon coding skills logo -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   </head>
-  <body> <!-- everything the user sees goes in here -->
+  <body>
 
-    <!-- top navigation bar -->
+    <!-- ===== NAVBAR ===== -->
     <nav>
-      <a href="#home" class="logo">Anh Nguyen</a> <!-- clicking name takes you back to top -->
-      <ul id="nav-menu"> <!-- the three nav links in the middle -->
+      <a href="#home" class="logo">Anh Nguyen</a>
+      <ul id="nav-menu">
         <li><a href="#aboutme">About Me</a></li>
         <li><a href="#experiences">Experiences</a></li>
         <li><a href="#projects">Projects</a></li>
@@ -23,298 +22,343 @@
         <li class="mobile-only"><a href="#contacts">Contact Me</a></li>
       </ul>
       <div class="contact-wrapper">
-        <a href="#contacts" class="contact-btn">Contact Me</a> <!-- the outlined button on the right -->
+        <a href="#contacts" class="contact-btn">Contact Me</a>
       </div>
       <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
       </button>
     </nav>
 
-<!-- home section -->
-<section id="home">
-  <canvas id="home-canvas"></canvas>
-  <img src="images/main.jpg" alt="Photo of Anh Nguyen" />
-  <div class="container">
-    <p class="text greeting-line">Hello, I am</p>
-    <p class="text name-line">Anh Nguyen</p>
-    <p class="subtitle">Aspiring <span id="rotating-title">Data Analyst</span></p>
-    <div class="social-links">
-      <a href="https://github.com/anhdroid25" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/anhng25/" target="_blank"><i class="fab fa-linkedin"></i></a>
-    </div>
-    <div class="home-stats">
-      <div class="stat-item">
-        <span class="stat-number">4+</span>
-        <span class="stat-label">Years Experience</span>
-      </div>
-    </div>
-    <div class="terminal-card">
-      <div class="terminal-header">
-        <span class="dot red"></span>
-        <span class="dot yellow"></span>
-        <span class="dot green"></span>
-        <span class="terminal-fname">profile.js</span>
-      </div>
-      <pre class="terminal-body"><code><span class="t-kw">const</span> <span class="t-var">developer</span> <span class="t-op">=</span> {
+    <!-- ===== HOME ===== -->
+    <section id="home">
+      <canvas id="home-canvas"></canvas>
+      <img src="images/main.jpg" alt="Photo of Anh Nguyen" />
+      <div class="container">
+        <p class="text greeting-line">Hello, I am</p>
+        <p class="text name-line">Anh Nguyen</p>
+        <p class="subtitle">Aspiring <span id="rotating-title">Data Analyst</span></p>
+        <div class="social-links">
+          <a href="https://github.com/anhdroid25" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/anhng25/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <div class="home-stats">
+          <div class="stat-item">
+            <span class="stat-number">4+</span>
+            <span class="stat-label">Years Experience</span>
+          </div>
+        </div>
+        <div class="terminal-card">
+          <div class="terminal-header">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="terminal-fname">profile.js</span>
+          </div>
+          <pre class="terminal-body"><code><span class="t-kw">const</span> <span class="t-var">developer</span> <span class="t-op">=</span> {
   <span class="t-key">name</span>:   <span class="t-str">"Anh Nguyen"</span>,
   <span class="t-key">degree</span>: <span class="t-str">"CS @ CSULB '26"</span>,
   <span class="t-key">focus</span>:  [<span class="t-str">"ML"</span>, <span class="t-str">"Software"</span>, <span class="t-str">"Data"</span>],
   <span class="t-key">status</span>: <span class="t-str">"Open to Work ✓"</span>
 }</code></pre>
-    </div>
-  </div>
-</section>
-
-<!-- about me section -->
-<section id="aboutme">
-  <div class="aboutme-row">
-    <div class="aboutme-photo">
-      <img src="images/scenary_photo.jpg" alt="Scenery" />
-      <img src="images/steak_photo.jpg" alt="Steak" />
-      <img src="images/dj_photo.jpg" alt="DJing" />
-      <img src="images/bobo.jpg" alt="Bobo" />
-    </div>
-    <div class="aboutme-block">
-      <h1>About Me</h1>
-      <p class="aboutme-bio">Hi there! I'm an aspiring Software, ML, and Data Engineer finishing up my CS degree at CSULB, Class of 2026. My name has three different pronunciations, only one is official, just ask!</p>
-      <p class="aboutme-bio">I live at the intersection of building solid systems and pulling useful intelligence out of messy data. Whether that's full-stack apps, database architecture, or ML models built for real-world impact, I'm also drawn to the business side: using data-driven insights to figure out how a specific technical solution can fix an actual problem.</p>
-      <p class="aboutme-bio">Currently looking for an entry-level role in software or data engineering. Long-term goal: take everything I've learned and build something of my own. Fair warning, I run on caffeine, so I might be slow to respond once it runs out.</p>
-      <p class="aboutme-bio">Feel free to browse my projects below. If you're passionate about something or have something to teach me, let's connect!</p>
-      <div class="aboutme-cards">
-        <div class="aboutme-card">
-          <strong>Hobbies</strong>
-          <p>Volleyball, DJing, Watching Videos About Cars & Rockets, Traveling</p>
-        </div>
-        <div class="aboutme-card">
-          <strong>Favorite Foods</strong>
-          <p>Steak (medium rare), Banh Mi, Pho, Beignets</p>
-        </div>
-        <div class="aboutme-card">
-          <strong>I Love</strong>
-          <p>My Family & Dog (Bobo), My DJ Deck, and My Camry!</p>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-
-<!-- experiences section -->
-<section id="experiences">
-  <div class="experiences-container">
-    <h1>Experiences</h1>
-
-    <!-- one experience entry -->
-    <div class="experience-card">
-      <div class="experience-header">
-        <div>
-          <h2>AI/Backend Engineer</h2>
-          <h3>Starbound — HappyMapper</h3>
+    <!-- ===== ABOUT ME ===== -->
+    <section id="aboutme">
+      <div class="aboutme-row">
+        <div class="aboutme-photo">
+          <img src="images/scenary_photo.jpg" alt="Scenery" />
+          <img src="images/steak_photo.jpg"   alt="Steak" />
+          <img src="images/dj_photo.jpg"      alt="DJing" />
+          <img src="images/bobo.jpg"          alt="Bobo" />
         </div>
-        <span class="experience-date">Sep. 2025 – Dec. 2025</span>
-      </div>
-      <ul>
-        <li>Served as lead AI engineer, architecting the full Gemini Vision AI integration from prompt design to production, achieving 98% menu extraction accuracy.</li>
-        <li>Built and deployed FastAPI backend with RESTful endpoints processing extraction requests in under 10 seconds end-to-end.</li>
-      </ul>
-    </div>
-
-    <div class="experience-card">
-      <div class="experience-header">
-        <div>
-          <h2>Machine Learning Engineer Intern</h2>
-          <h3>PVNet</h3>
+        <div class="aboutme-block">
+          <h1>About Me</h1>
+          <p class="aboutme-bio">Hi there! I'm an aspiring Software, ML, and Data Engineer finishing up my CS degree at CSULB, Class of 2026. My name has three different pronunciations, only one is official, just ask!</p>
+          <p class="aboutme-bio">I live at the intersection of building solid systems and pulling useful intelligence out of messy data. Whether that's full-stack apps, database architecture, or ML models built for real-world impact, I'm also drawn to the business side: using data-driven insights to figure out how a specific technical solution can fix an actual problem.</p>
+          <p class="aboutme-bio">Currently looking for an entry-level role in software or data engineering. Long-term goal: take everything I've learned and build something of my own. Fair warning, I run on caffeine, so I might be slow to respond once it runs out.</p>
+          <p class="aboutme-bio">Feel free to browse my projects below. If you're passionate about something or have something to teach me, let's connect!</p>
+          <div class="aboutme-cards">
+            <div class="aboutme-card">
+              <strong>Hobbies</strong>
+              <p>Volleyball, DJing, Watching Videos About Cars &amp; Rockets, Traveling</p>
+            </div>
+            <div class="aboutme-card">
+              <strong>Favorite Foods</strong>
+              <p>Steak (medium rare), Banh Mi, Pho, Beignets</p>
+            </div>
+            <div class="aboutme-card">
+              <strong>I Love</strong>
+              <p>My Family &amp; Dog (Bobo), My DJ Deck, and My Camry!</p>
+            </div>
+          </div>
         </div>
-        <span class="experience-date">May 2025 – October 2025</span>
       </div>
-      <ul>
-        <li>Engineered YOLOv8 + MediaPipe Pose fusion pipeline for real-time bike rider classification in live video streams.</li>
-        <li>Architected IoU-based detection and pose estimation logic to maintain robust performance under occlusions and
-challenging angles.</li>
-        <li>Deployed production-grade Python/OpenCV/PyTorch computer vision system for continuous public safety monitoring.</li>
-      </ul>
-    </div>
+    </section>
 
-    <div class="experience-card">
-      <div class="experience-header">
-        <div>
-          <h2>Research Assistant</h2>
-          <h3>California State University, Long Beach</h3>
+    <!-- ===== EXPERIENCES ===== -->
+    <section id="experiences">
+      <div class="experiences-container">
+        <h1>Experiences</h1>
+
+        <div class="experience-card">
+          <div class="experience-header">
+            <div>
+              <h2>AI/Backend Engineer</h2>
+              <h3>Starbound — HappyMapper</h3>
+            </div>
+            <span class="experience-date">Sep. 2025 – Dec. 2025</span>
+          </div>
+          <ul>
+            <li>Served as lead AI engineer, architecting the full Gemini Vision AI integration from prompt design to production, achieving 98% menu extraction accuracy.</li>
+            <li>Built and deployed FastAPI backend with RESTful endpoints processing extraction requests in under 10 seconds end-to-end.</li>
+          </ul>
         </div>
-        <span class="experience-date">Jan 2025 – May 2025</span>
-      </div>
-      <ul>
-        <li>Orchestrated data collection, organization, and statistical analysis for faculty-led research initiatives.</li>
-        <li>Conducted literature reviews and synthesized findings to strengthen presentations and grant proposals</li>
-      </ul>
-    </div>
 
-    <div class="experience-card">
-      <div class="experience-header">
-        <div>
-          <h2>IT Techinician</h2>
-          <h3>City Dental</h3>
+        <div class="experience-card">
+          <div class="experience-header">
+            <div>
+              <h2>Machine Learning Engineer Intern</h2>
+              <h3>PVNet</h3>
+            </div>
+            <span class="experience-date">May 2025 – Oct. 2025</span>
+          </div>
+          <ul>
+            <li>Engineered YOLOv8 + MediaPipe Pose fusion pipeline for real-time bike rider classification in live video streams.</li>
+            <li>Architected IoU-based detection and pose estimation logic to maintain robust performance under occlusions and challenging angles.</li>
+            <li>Deployed production-grade Python/OpenCV/PyTorch computer vision system for continuous public safety monitoring.</li>
+          </ul>
         </div>
-        <span class="experience-date">May 2024 – August 2024</span>
-      </div>
-      <ul>
-        <li> Architected and implemented Microsoft Access database solution to optimize patient record management and
-streamline clinic operations.</li>
-        <li>Automated data processing workflows using Google Sheets, increasing office staff productivity and reducing manual entry errors.</li>
-      </ul>
-    </div>
 
-  </div>
-</section>
-
-<!-- projects section -->
-<section id="projects">
-  <div class="projects-container">
-    <h1>Projects</h1>
-
-    <!-- Data Analysis -->
-    <h2>Data Analysis</h2>
-    <div class="project-scroll">
-      <div class="project-card">
-        <img src="images/tech_salary.jpg" alt="Project 1" />
-        <h3>US Tech Salary Analysis and Prediction</h3>
-        <p class="preview">Compared U.S. tech salaries and predicted pay.</p>
-        <button class="view-btn" onclick="openModal('US Tech Salary Analysis and Prediction', 'Analyzed 3,299 U.S. Stack Overflow 2024 responses to identify salary drivers (role, experience, education, remote work, industry) and compared Linear Regression, Random Forest, and XGBoost; XGBoost performed best (R² = 0.239).', 'Python, Pandas, NumPy, Seaborn, Scikit-learn, XGBoost', 'https://github.com/anhdroid25/tech_salary_analysis')">View Project</button>
-      </div>
-      <div class="project-card">
-        <img src="images/space_launch.jpg" alt="Project 2" />
-        <h3>Global Space Launch Industry Analysis</h3>
-        <p class="preview">Built a Power BI dashboard on global launch trends.</p>
-        <button class="view-btn" onclick="openModal('Global Space Launch Industry Analysis', 'Built an interactive Power BI analysis of global space launches using Keith D42\'s Kaggle dataset (rocket-launch-industry), highlighting launch volume trends, company success rates, and payload capacity by rocket configuration.', 'Power BI, DAX, Power Query, Kaggle Dataset', 'https://drive.google.com/uc?export=download&id=1ouhdBnkrmijRtO9fuZuKYdPnLKZzVyCP', 'Download .pbix')">View Project</button>
-      </div>
-      <div class="project-card">
-        <img src="images/customer_churn.jpeg" alt="Project 3" />
-        <h3>Customer Churn Data Visualization</h3>
-        <p class="preview">Designed an interactive Tableau dashboard analyzing telecom customer churn.</p>
-        <button class="view-btn" onclick="openModal('Customer Churn Data Visualization', 'Built a comprehensive interactive Tableau dashboard for CECS 450 Data Visualization exploring telecom customer churn. Covered exploratory analysis, churn rate KPIs, geographic mapping, customer demographics, service usage, billing patterns, and revenue trends across 12 dashboard views with filters and storytelling.', 'Tableau', 'https://public.tableau.com/app/profile/anh.nguyen1268/viz/CECS450_Telecom_Churn_Dashboard_Anh/MainDashboard', 'View on Tableau Public')">View Project</button>
-      </div>
-    </div>
-
-    <!-- Machine Learning -->
-    <h2>Machine Learning</h2>
-    <div class="project-scroll">
-      <div class="project-card">
-        <img src="images/ebike.png" alt="Project 1" />
-        <h3>E-Bike Detection</h3>
-        <p class="preview">Real-time rider and e-bike detection device for mall safety.</p>
-        <button class="view-btn" onclick="openModal('E-Bike Detection', 'Built a real-time computer vision pipeline for rider and e-bike detection using YOLO on live camera streams, with a Jetson-optimized GPU path and TensorRT acceleration for faster inference.', 'Python, OpenCV, YOLO, Jetson Orin, TensorRT', 'https://github.com/anhdroid25/mall_safety')">View Project</button>
-      </div>
-      <div class="project-card">
-        <img src="images/text_message.jpg" alt="Project 2" />
-        <h3>Emotions Over Text Prediction</h3>
-        <p class="preview">Classified text emotions with 74% accuracy using 7 ML models.</p>
-        <button class="view-btn" onclick="openModal('Emotions Over Text Prediction', 'Built a multi-class emotion classifier trained on 31,000+ labeled text samples across 8 emotion categories (anger, disgust, fear, joy, neutral, sadness, shame, surprise). Applied TF-IDF vectorization, SMOTE for class imbalance, and compared 7 models — Logistic Regression, Naive Bayes, SVM, Decision Tree, MLP, Random Forest, and XGBoost — with GridSearchCV tuning, achieving ~74% accuracy.', 'Python, Scikit-learn, XGBoost, NLTK, SMOTE, TF-IDF, Pandas', 'https://github.com/porterclev/456-project')">View Project</button>
-      </div>
-      <div class="project-card">
-        <img src="images/dietary.jpg" alt="Project 3" />
-        <h3>AI Dietary Expert</h3>
-        <p class="preview">Customizable AI nutrition planner web app.</p>
-        <button class="view-btn" onclick="openModal('AI Dietary Expert', 'Built a full-stack AI nutrition assistant that uses user profile inputs like age, height, weight, medical conditions, dietary preferences, and health goals to generate personalized meal guidance.', 'TypeScript, React, Tailwind CSS, Axios, FastAPI, OpenAI API', 'https://github.com/adrnabrm/beachhacks-spring25')">View Project</button>
-      </div>
-      <div class="project-card">
-        <img src="images/port_nexus.png" alt="Port-Power Nexus" />
-        <h3>Port-Power Nexus</h3>
-        <p class="preview">Decentralized AI swarm that auctions EV charging slots using live California grid data.</p>
-        <button class="view-btn" onclick="openModal('Port-Power Nexus', 'Built a decentralized AI agent swarm to solve EV charging demand at the Port of Long Beach. Autonomous truck agents bid in real-time Dutch auctions driven by live CAISO grid stress and renewable energy data. An Orchestrator agent registered on Agentverse handles natural language commands via ASI:One, while truck agents use OpenAI to reason over battery urgency, price trends, and grid conditions before bidding. Winning bids trigger on-chain payments via Fetch Ledger testnet. A React dashboard visualizes the swarm live via Supabase Realtime.', 'Python, uAgents, ASI:One, OpenAI API, React, Tailwind, Supabase, CAISO API, Fetch Ledger', 'https://github.com/anhdroid25/beachhack_2026')">View Project</button>
-      </div>
-    </div>
-
-    <!-- Software Engineering -->
-    <h2>Software Engineering</h2>
-    <div class="project-scroll">
-      <div class="project-card">
-        <img src="images/happy_mapper.png" alt="Project 1" />
-        <h3>HappyMapper</h3>
-        <p class="preview">Finds nearby happy-hour deals in real time.</p>
-        <button class="view-btn" onclick="openModal('HappyMapper', 'Built a real-time happy-hour discovery app where users can find nearby deals, upload menu photos, and extract deal details with an AI parser for faster local recommendations.', 'React Native, Flask, Firebase, Firestore, Nexa AI, Vercel', 'https://github.com/WinstonTa/Starbound-Atlas-2025')">View Project</button>
-      </div>
-      <div class="project-card">
-        <img src="images/pique.png" alt="Project 2" />
-        <h3>Pique</h3>
-        <p class="preview">Local events hosting Android app with Meet-in-the-Middle function</p>
-        <button class="view-btn" onclick="openModal('Pique', 'Pique is a community-driven Android app that connects people through local events. Users can discover and post events happening nearby, leave reviews, and track attendance — all while competing on a live leaderboard that ranks who\'s the most active in their community. The standout Meet-in-the-Middle feature intelligently finds events at the geographic midpoint between friends, making group hangout planning effortless.', 'React Native, Python, Firebase, Google Maps API, Stripe', 'https://github.com/CamilleWong-elif/Pique_491B')">View Project</button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Skills section -->
-<section id="skills">
-  <div class="skills-container">
-    <h1>Skills</h1>
-
-    <h2>Programming Languages</h2>
-    <div class="skills-grid row-10">
-      <i class="devicon-python-plain colored"></i>
-      <i class="devicon-javascript-plain colored"></i>
-      <i class="devicon-cplusplus-plain colored"></i>
-      <i class="devicon-csharp-plain colored"></i>
-      <i class="devicon-mysql-plain colored"></i>
-      <i class="devicon-postgresql-plain colored"></i>
-      <i class="devicon-html5-plain colored"></i>
-      <i class="devicon-css3-plain colored"></i>
-      <i class="devicon-react-plain colored"></i>
-      <i class="devicon-r-plain colored"></i>
-    </div>
-
-    <h2>Libraries</h2>
-    <div class="skills-grid">
-      <i class="devicon-scikitlearn-plain colored"></i>
-      <i class="devicon-pytorch-plain colored"></i>
-      <i class="devicon-opencv-plain colored"></i>
-      <i class="devicon-matplotlib-plain colored"></i>
-      <i class="devicon-numpy-plain colored"></i>
-      <i class="devicon-visualstudio-plain colored"></i>
-    </div>
-
-    <h2>Tools</h2>
-    <div class="skills-grid">
-      <i class="devicon-github-plain colored"></i>
-      <i class="devicon-firebase-plain colored"></i>
-      <i class="devicon-mongodb-plain colored"></i>
-      <i class="devicon-vscode-plain colored"></i>
-    </div>
-  </div>
-</section>
-
-<!-- contacts section -->
-<section id="contacts">
-  <div class="contacts-container">
-    <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
-        <div class="contact-left-title">
-          <h2>Send me a message! (About anything...seriously)</h2>
-          <hr>
+        <div class="experience-card">
+          <div class="experience-header">
+            <div>
+              <h2>Research Assistant</h2>
+              <h3>California State University, Long Beach</h3>
+            </div>
+            <span class="experience-date">Jan. 2025 – May 2025</span>
+          </div>
+          <ul>
+            <li>Orchestrated data collection, organization, and statistical analysis for faculty-led research initiatives.</li>
+            <li>Conducted literature reviews and synthesized findings to strengthen presentations and grant proposals.</li>
+          </ul>
         </div>
-        <input type="hidden" name="access_key" value="9feda151-ec17-43b9-9ec1-be6452c7d5ee">
-        <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
-        <input type="email" name="name" placeholder="Your Email" class="contact-inputs" required>
-        <textarea name = "messsage" placeholder="Your Message" class="contact-inputs" required></textarea>
-        <button type="submit">Submit</button>
-    </form>
-    <div class="contact-right">
-      <img src="" alt="" />
+
+        <div class="experience-card">
+          <div class="experience-header">
+            <div>
+              <h2>IT Technician</h2>
+              <h3>City Dental</h3>
+            </div>
+            <span class="experience-date">May 2024 – Aug. 2024</span>
+          </div>
+          <ul>
+            <li>Architected and implemented Microsoft Access database solution to optimize patient record management and streamline clinic operations.</li>
+            <li>Automated data processing workflows using Google Sheets, increasing office staff productivity and reducing manual entry errors.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+    <section id="projects">
+      <div class="projects-container">
+        <h1>Projects</h1>
+
+        <!-- Data Analysis -->
+        <div class="project-category">
+          <h2>Data Analysis</h2>
+          <div class="project-grid">
+            <div class="project-card">
+              <img src="images/tech_salary.jpg" alt="Tech Salary Analysis" />
+              <div class="project-card-body">
+                <h3>US Tech Salary Analysis and Prediction</h3>
+                <p class="preview">Compared U.S. tech salaries and predicted pay.</p>
+                <button class="view-btn" onclick="openModal('US Tech Salary Analysis and Prediction', 'Analyzed 3,299 U.S. Stack Overflow 2024 responses to identify salary drivers (role, experience, education, remote work, industry) and compared Linear Regression, Random Forest, and XGBoost; XGBoost performed best (R² = 0.239).', 'Python, Pandas, NumPy, Seaborn, Scikit-learn, XGBoost', 'https://github.com/anhdroid25/tech_salary_analysis')">View Project</button>
+              </div>
+            </div>
+            <div class="project-card">
+              <img src="images/space_launch.jpg" alt="Space Launch Analysis" />
+              <div class="project-card-body">
+                <h3>Global Space Launch Industry Analysis</h3>
+                <p class="preview">Built a Power BI dashboard on global launch trends.</p>
+                <button class="view-btn" onclick="openModal('Global Space Launch Industry Analysis', 'Built an interactive Power BI analysis of global space launches using Keith D42\'s Kaggle dataset (rocket-launch-industry), highlighting launch volume trends, company success rates, and payload capacity by rocket configuration.', 'Power BI, DAX, Power Query, Kaggle Dataset', 'https://drive.google.com/uc?export=download&id=1ouhdBnkrmijRtO9fuZuKYdPnLKZzVyCP', 'Download .pbix')">View Project</button>
+              </div>
+            </div>
+            <div class="project-card">
+              <img src="images/customer_churn.jpeg" alt="Customer Churn" />
+              <div class="project-card-body">
+                <h3>Customer Churn Data Visualization</h3>
+                <p class="preview">Designed an interactive Tableau dashboard analyzing telecom customer churn.</p>
+                <button class="view-btn" onclick="openModal('Customer Churn Data Visualization', 'Built a comprehensive interactive Tableau dashboard for CECS 450 Data Visualization exploring telecom customer churn. Covered exploratory analysis, churn rate KPIs, geographic mapping, customer demographics, service usage, billing patterns, and revenue trends across 12 dashboard views with filters and storytelling.', 'Tableau', 'https://public.tableau.com/app/profile/anh.nguyen1268/viz/CECS450_Telecom_Churn_Dashboard_Anh/MainDashboard', 'View on Tableau Public')">View Project</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Machine Learning -->
+        <div class="project-category">
+          <h2>Machine Learning</h2>
+          <div class="project-grid">
+            <div class="project-card">
+              <img src="images/ebike.png" alt="E-Bike Detection" />
+              <div class="project-card-body">
+                <h3>E-Bike Detection</h3>
+                <p class="preview">Real-time rider and e-bike detection device for mall safety.</p>
+                <button class="view-btn" onclick="openModal('E-Bike Detection', 'Built a real-time computer vision pipeline for rider and e-bike detection using YOLO on live camera streams, with a Jetson-optimized GPU path and TensorRT acceleration for faster inference.', 'Python, OpenCV, YOLO, Jetson Orin, TensorRT', 'https://github.com/anhdroid25/mall_safety')">View Project</button>
+              </div>
+            </div>
+            <div class="project-card">
+              <img src="images/text_message.jpg" alt="Emotions Prediction" />
+              <div class="project-card-body">
+                <h3>Emotions Over Text Prediction</h3>
+                <p class="preview">Classified text emotions with 74% accuracy using 7 ML models.</p>
+                <button class="view-btn" onclick="openModal('Emotions Over Text Prediction', 'Built a multi-class emotion classifier trained on 31,000+ labeled text samples across 8 emotion categories (anger, disgust, fear, joy, neutral, sadness, shame, surprise). Applied TF-IDF vectorization, SMOTE for class imbalance, and compared 7 models — Logistic Regression, Naive Bayes, SVM, Decision Tree, MLP, Random Forest, and XGBoost — with GridSearchCV tuning, achieving ~74% accuracy.', 'Python, Scikit-learn, XGBoost, NLTK, SMOTE, TF-IDF, Pandas', 'https://github.com/porterclev/456-project')">View Project</button>
+              </div>
+            </div>
+            <div class="project-card">
+              <img src="images/dietary.jpg" alt="AI Dietary Expert" />
+              <div class="project-card-body">
+                <h3>AI Dietary Expert</h3>
+                <p class="preview">Customizable AI nutrition planner web app.</p>
+                <button class="view-btn" onclick="openModal('AI Dietary Expert', 'Built a full-stack AI nutrition assistant that uses user profile inputs like age, height, weight, medical conditions, dietary preferences, and health goals to generate personalized meal guidance.', 'TypeScript, React, Tailwind CSS, Axios, FastAPI, OpenAI API', 'https://github.com/adrnabrm/beachhacks-spring25')">View Project</button>
+              </div>
+            </div>
+            <div class="project-card">
+              <img src="images/port_nexus.png" alt="Port-Power Nexus" />
+              <div class="project-card-body">
+                <h3>Port-Power Nexus</h3>
+                <p class="preview">Decentralized AI swarm that auctions EV charging slots using live California grid data.</p>
+                <button class="view-btn" onclick="openModal('Port-Power Nexus', 'Built a decentralized AI agent swarm to solve EV charging demand at the Port of Long Beach. Autonomous truck agents bid in real-time Dutch auctions driven by live CAISO grid stress and renewable energy data. An Orchestrator agent registered on Agentverse handles natural language commands via ASI:One, while truck agents use OpenAI to reason over battery urgency, price trends, and grid conditions before bidding. Winning bids trigger on-chain payments via Fetch Ledger testnet. A React dashboard visualizes the swarm live via Supabase Realtime.', 'Python, uAgents, ASI:One, OpenAI API, React, Tailwind, Supabase, CAISO API, Fetch Ledger', 'https://github.com/anhdroid25/beachhack_2026')">View Project</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Software Engineering -->
+        <div class="project-category">
+          <h2>Software Engineering</h2>
+          <div class="project-grid">
+            <div class="project-card">
+              <img src="images/happy_mapper.png" alt="HappyMapper" />
+              <div class="project-card-body">
+                <h3>HappyMapper</h3>
+                <p class="preview">Finds nearby happy-hour deals in real time.</p>
+                <button class="view-btn" onclick="openModal('HappyMapper', 'Built a real-time happy-hour discovery app where users can find nearby deals, upload menu photos, and extract deal details with an AI parser for faster local recommendations.', 'React Native, Flask, Firebase, Firestore, Nexa AI, Vercel', 'https://github.com/WinstonTa/Starbound-Atlas-2025')">View Project</button>
+              </div>
+            </div>
+            <div class="project-card">
+              <img src="images/pique.png" alt="Pique" />
+              <div class="project-card-body">
+                <h3>Pique</h3>
+                <p class="preview">Local events hosting Android app with Meet-in-the-Middle function.</p>
+                <button class="view-btn" onclick="openModal('Pique', 'Pique is a community-driven Android app that connects people through local events. Users can discover and post events happening nearby, leave reviews, and track attendance — all while competing on a live leaderboard that ranks who\'s the most active in their community. The standout Meet-in-the-Middle feature intelligently finds events at the geographic midpoint between friends, making group hangout planning effortless.', 'React Native, Python, Firebase, Google Maps API, Stripe', 'https://github.com/CamilleWong-elif/Pique_491B')">View Project</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section id="skills">
+      <div class="skills-container">
+        <h1>Skills</h1>
+
+        <div class="skill-group">
+          <h2>Programming Languages</h2>
+          <div class="skills-grid">
+            <i class="devicon-python-plain colored"></i>
+            <i class="devicon-javascript-plain colored"></i>
+            <i class="devicon-cplusplus-plain colored"></i>
+            <i class="devicon-csharp-plain colored"></i>
+            <i class="devicon-mysql-plain colored"></i>
+            <i class="devicon-postgresql-plain colored"></i>
+            <i class="devicon-html5-plain colored"></i>
+            <i class="devicon-css3-plain colored"></i>
+            <i class="devicon-react-plain colored"></i>
+            <i class="devicon-r-plain colored"></i>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h2>Libraries</h2>
+          <div class="skills-grid">
+            <i class="devicon-scikitlearn-plain colored"></i>
+            <i class="devicon-pytorch-plain colored"></i>
+            <i class="devicon-opencv-plain colored"></i>
+            <i class="devicon-matplotlib-plain colored"></i>
+            <i class="devicon-numpy-plain colored"></i>
+            <i class="devicon-visualstudio-plain colored"></i>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h2>Tools</h2>
+          <div class="skills-grid">
+            <i class="devicon-github-plain colored"></i>
+            <i class="devicon-firebase-plain colored"></i>
+            <i class="devicon-mongodb-plain colored"></i>
+            <i class="devicon-vscode-plain colored"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACTS ===== -->
+    <section id="contacts">
+      <div class="contacts-container">
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+          <div class="contact-left-title">
+            <h2>Send me a message! (About anything... seriously)</h2>
+            <hr>
+          </div>
+          <input type="hidden" name="access_key" value="9feda151-ec17-43b9-9ec1-be6452c7d5ee">
+          <input type="text"  name="name"    placeholder="Your Name"    class="contact-inputs" required>
+          <input type="email" name="email"   placeholder="Your Email"   class="contact-inputs" required>
+          <textarea           name="message" placeholder="Your Message" class="contact-inputs"  required></textarea>
+          <button type="submit">Submit</button>
+        </form>
+
+        <div class="contact-info">
+          <div>
+            <p class="contact-info-heading">Let's Connect</p>
+            <p class="contact-info-sub">I'm currently open to new opportunities. Whether you have a question, a project idea, or just want to say hi — my inbox is always open!</p>
+          </div>
+          <div class="contact-info-items">
+            <a class="contact-info-item" href="https://github.com/anhdroid25" target="_blank">
+              <i class="fab fa-github"></i>
+              <span>github.com/anhdroid25</span>
+            </a>
+            <a class="contact-info-item" href="https://www.linkedin.com/in/anhng25/" target="_blank">
+              <i class="fab fa-linkedin"></i>
+              <span>linkedin.com/in/anhng25</span>
+            </a>
+            <div class="contact-info-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Long Beach, CA</span>
+            </div>
+          </div>
+          <div class="contact-socials">
+            <a href="https://github.com/anhdroid25" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/anhng25/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROJECT MODAL ===== -->
+    <div id="project-modal" class="modal-overlay" onclick="closeModal(event)">
+      <div class="modal-content">
+        <button class="modal-close" onclick="closeModal()">✕</button>
+        <h2 id="modal-title"></h2>
+        <p  id="modal-description"></p>
+        <p  id="modal-tools"></p>
+        <a  id="modal-link" href="" target="_blank">View on GitHub</a>
+      </div>
     </div>
-  </div>
-</section>
 
-<!-- project modal overlay -->
-<div id="project-modal" class="modal-overlay" onclick="closeModal(event)">
-  <div class="modal-content">
-    <button class="modal-close" onclick="closeModal()">✕</button>
-    <h2 id="modal-title"></h2>
-    <p id="modal-description"></p>
-    <p id="modal-tools"></p>
-    <a id="modal-link" href="" target="_blank">View on GitHub</a>
-  </div>
-</div>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
