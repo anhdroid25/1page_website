@@ -101,6 +101,8 @@ nav ul li a:hover::after { width: 100%; }
 
 .contact-wrapper {
   flex-shrink: 0;
+  display: flex;
+  gap: 12px;
 }
 
 .contact-btn {
