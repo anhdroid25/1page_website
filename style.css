@@ -124,6 +124,9 @@ section {
   scroll-margin-top: var(--nav-h);
   width: 100%;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /* Alternating section backgrounds */
@@ -162,6 +165,7 @@ section {
 #home {
   min-height: 100vh;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 80px;
@@ -1007,6 +1011,9 @@ section {
   /* Use dynamic viewport height on mobile so browser chrome is accounted for */
   section {
     min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   /* About Me */
